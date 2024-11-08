@@ -1,17 +1,27 @@
 import React from 'react'; // Correct capitalization
-import { View, Text, ScrollView } from 'react-native'; // Import Text and ScrollView
+import {View, Text, ScrollView, StyleSheet} from 'react-native'; // Import Text and ScrollView
 import Boat from './Component/boat';
 
 const AllBoat = () => { // Component name should start with a capital letter
+
+  const styles = StyleSheet.create({
+    title: {
+      textAlign: 'center',
+      fontWeight: "bold",
+      fontSize: 25,
+      backgroundColor: "whitesmoke",
+      margin: 20
+    }
+  })
+
   return (
       <View>
         <ScrollView>
           <Text></Text>
           <Text></Text>
           <Text></Text>
-          <Text>GetABoat - For Sale</Text>
-          <Text></Text>
-          <Text></Text>
+          <Text style={styles.title}>GetABoat - For Sale</Text>
+
 
           <Boat
               name="Sea Ray 500 Sundancer"
